@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "adding.h"
+#include "xmlparser.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +16,11 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    XmlParser parser;
+    void addStringTable(QString,QString,QString);
+
+private slots:
+    void on_pushButtonAdd_clicked();
 
 private:
     Ui::MainWindow *ui;
