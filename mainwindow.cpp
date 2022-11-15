@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    parser.createNewXml(ui->tableWidget);
+    parser.readXml(ui->tableWidget);
 }
 
 MainWindow::~MainWindow()
@@ -30,5 +30,4 @@ void MainWindow::on_pushButtonAdd_clicked()
 {
     Adding* newDialog = new Adding(this);
     newDialog->show();
-
 }

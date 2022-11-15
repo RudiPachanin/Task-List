@@ -10,7 +10,7 @@ class XmlParser
 public:
     XmlParser();
     void createNewXml(QTableWidget*);
-    void readXml();
+    void readXml(QTableWidget*);
 };
 
 #endif // XMLPARSER_H
