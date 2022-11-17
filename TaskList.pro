@@ -11,13 +11,17 @@ CONFIG += c++11
 
 SOURCES += \
     adding.cpp \
+    jsonparser.cpp \
     main.cpp \
     mainwindow.cpp \
+    parser.cpp \
     xmlparser.cpp
 
 HEADERS += \
     adding.h \
+    jsonparser.h \
     mainwindow.h \
+    parser.h \
     xmlparser.h
 
 FORMS += \

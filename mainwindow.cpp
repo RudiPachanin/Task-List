@@ -1,18 +1,19 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "ui_adding.h"
+#include "QModelIndex"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    parser.readXml(ui->tableWidget);
+    parser.read(ui->tableWidget);
 }
 
 MainWindow::~MainWindow()
 {
-    parser.createNewXml(ui->tableWidget);
+    parser.save(ui->tableWidget);
     delete ui;
 }
 
@@ -31,3 +32,13 @@ void MainWindow::on_pushButtonAdd_clicked()
     Adding* newDialog = new Adding(this);
     newDialog->show();
 }
+
+void MainWindow::on_pushButtonDel_clicked()
+{
+    QModelIndexList selectedRows = ui->tableWidget->selectionModel()->selectedRows();
+    while (!selectedRows.empty()) {
+        ui->tableWidget->removeRow(selectedRows[0].row());
+        selectedRows = ui->tableWidget->selectionModel()->selectedRows();
+    }
+}
+

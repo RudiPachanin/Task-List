@@ -1,16 +1,17 @@
 #ifndef XMLPARSER_H
 #define XMLPARSER_H
 
-#include "QTableWidget"
+
+#include "parser.h"
 
 
 
-class XmlParser
+class XmlParser:public Parser
 {
 public:
     XmlParser();
-    void createNewXml(QTableWidget*);
-    void readXml(QTableWidget*);
+    void save(QTableWidget*);
+    void read(QTableWidget*);
 };
 
 #endif // XMLPARSER_H

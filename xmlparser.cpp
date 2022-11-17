@@ -11,7 +11,7 @@ XmlParser::XmlParser()
 
 }
 
-void XmlParser::createNewXml(QTableWidget* widget)
+void XmlParser::save(QTableWidget* widget)
 {
     QFile fileSpencer ("TaskList.xml");
     fileSpencer.open(QIODevice::ReadWrite);
@@ -40,7 +40,7 @@ void XmlParser::createNewXml(QTableWidget* widget)
     fileSpencer.close();
 }
 
-void XmlParser::readXml(QTableWidget* widget)
+void XmlParser::read(QTableWidget* widget)
 {
     QFile fileSpencer ("TaskList.xml");
     fileSpencer.open(QIODevice::ReadWrite);
