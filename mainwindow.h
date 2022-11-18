@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "adding.h"
 #include "xmlparser.h"
+#include "jsonparser.h"
+#include "parser.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,13 +18,13 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    XmlParser parser;
+    Parser* parser = nullptr;
+
     void addStringTable(QString,QString,QString);
+    Parser* getParser();
 
 private slots:
     void on_pushButtonAdd_clicked();
-
-
     void on_pushButtonDel_clicked();
 
 private:

@@ -11,6 +11,11 @@ XmlParser::XmlParser()
 
 }
 
+XmlParser::~XmlParser()
+{
+
+}
+
 void XmlParser::save(QTableWidget* widget)
 {
     QFile fileSpencer ("TaskList.xml");

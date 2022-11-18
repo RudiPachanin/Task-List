@@ -139,16 +139,22 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QRadioButton" name="radioButton">
+      <widget class="QRadioButton" name="radioButtonXml">
        <property name="text">
         <string>XML</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QRadioButton" name="radioButton_2">
+      <widget class="QRadioButton" name="radioButtonJson">
        <property name="text">
         <string>Json </string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

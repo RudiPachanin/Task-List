@@ -8,8 +8,10 @@ class Parser
 {
 public:
     Parser();
+    ~Parser();
    virtual void save(QTableWidget*) = 0;
    virtual void read(QTableWidget*) = 0;
+
 };
 
 #endif // PARSER_H

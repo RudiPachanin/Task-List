@@ -8,6 +8,7 @@ class JsonParser:public Parser
 {
 public:
     JsonParser();
+    ~JsonParser();
 
     // Parser interface
 public:

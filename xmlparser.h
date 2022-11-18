@@ -10,6 +10,7 @@ class XmlParser:public Parser
 {
 public:
     XmlParser();
+    ~XmlParser();
     void save(QTableWidget*);
     void read(QTableWidget*);
 };
