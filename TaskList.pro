@@ -8,25 +8,24 @@ CONFIG += c++11
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-
 SOURCES += \
-    adding.cpp \
-    jsonparser.cpp \
-    main.cpp \
-    mainwindow.cpp \
-    parser.cpp \
-    xmlparser.cpp
+    src/cpp/adding.cpp \
+    src/cpp/jsonparser.cpp \
+    src/cpp/main.cpp \
+    src/cpp/mainwindow.cpp \
+    src/cpp/parser.cpp \
+    src/cpp/xmlparser.cpp \
 
 HEADERS += \
-    adding.h \
-    jsonparser.h \
-    mainwindow.h \
-    parser.h \
-    xmlparser.h
+    src/header/adding.h \
+    src/header/jsonparser.h \
+    src/header/mainwindow.h \
+    src/header/parser.h \
+    src/header/xmlparser.h \
 
 FORMS += \
-    adding.ui \
-    mainwindow.ui
+    src/ui/adding.ui \
+    src/ui/mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
