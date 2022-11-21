@@ -16,6 +16,7 @@ Adding::~Adding()
 
 void Adding::on_buttonBox_accepted()
 {
+
     QString Fio = ui->lineEditFIO->text();
     QString Task = ui->textEditTask->toPlainText();
     QString date = ui->dateTimeEdit->text();
